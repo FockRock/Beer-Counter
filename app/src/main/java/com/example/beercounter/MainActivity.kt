@@ -20,9 +20,14 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        var i = 0
-        bindingClass.imageView.setOnClickListener {
+        var i = 1
+        bindingClass.imageButton.setOnClickListener {
             bindingClass.textView.text = i++.toString()
+            if ( bindingClass.textView.text == "5") {
+                bindingClass.textView.textSize += 1F
+            } else if (bindingClass.textView.text == "10") {
+                bindingClass.textView.textSize += 1F
+            }
         }
     }
 }
