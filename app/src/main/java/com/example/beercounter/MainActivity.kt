@@ -24,9 +24,11 @@ class MainActivity : AppCompatActivity() {
         bindingClass.imageButton.setOnClickListener {
             bindingClass.textView.text = i++.toString()
             if ( bindingClass.textView.text == "5") {
+                bindingClass.textView.setTextColor(getColor(R.color.yellow))
                 bindingClass.textView.textSize += 1F
             } else if (bindingClass.textView.text == "10") {
                 bindingClass.textView.textSize += 1F
+                bindingClass.textView.setTextColor(getColor(R.color.red))
             }
         }
     }
