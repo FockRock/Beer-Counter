@@ -1,6 +1,7 @@
 package com.example.beercounter
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         var i = 1
         bindingClass.imageButton.setOnClickListener {
             bindingClass.textView.text = i++.toString()
+            Toast.makeText(this,"Another beer!", Toast.LENGTH_SHORT).show()
             if ( bindingClass.textView.text == "5") {
                 bindingClass.textView.setTextColor(getColor(R.color.yellow))
                 bindingClass.textView.textSize += 1F
